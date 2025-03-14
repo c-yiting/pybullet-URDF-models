@@ -107,7 +107,7 @@ p.loadURDF("table/table.urdf")
 flags = p.URDF_USE_INERTIA_FROM_FILE
 # randomly get a model
 for i in range(8):
-    random_model = namelist[random.randint(0, len(namelist))] 
+    random_model = namelist[random.randint(0, len(namelist) - 1)]
     p.loadURDF(models[random_model], [0., 0., 0.8 + 0.15*i], flags=flags)
 
 p.setGravity(0, 0, -9.8)
